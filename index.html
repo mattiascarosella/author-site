@@ -5,58 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mattias Carosella | Author</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f9f7f2; color: #2d2d2d; }
-        h1, h2, .serif { font-family: 'EB Garamond', serif; }
-        .fade-in { animation: fadeIn 1.5s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background-color: #f4f1ea; /* Soft ink/paper tone */
+            color: #1a1a1a; 
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .literary { font-family: 'Cormorant Garamond', serif; }
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Subtle Ink Wash Accent */
+        .ink-accent {
+            background: radial-gradient(circle at top right, rgba(0,0,0,0.03) 0%, transparent 70%);
+        }
     </style>
 </head>
-<body class="max-w-4xl mx-auto px-6 py-12 md:py-24">
+<body class="ink-accent min-h-screen">
 
-    <header class="mb-24 fade-in">
-        <h1 class="text-6xl md:text-8xl mb-4 tracking-tight">Mattias Carosella</h1>
-        <p class="text-xl md:text-2xl font-light text-gray-600 italic">Author, Explorer, Storyteller.</p>
-    </header>
+    <div class="max-w-4xl mx-auto px-8 py-16 md:py-32">
+        <header class="mb-32 fade-in">
+            <h1 class="text-7xl md:text-9xl mb-6 tracking-tighter leading-none">Mattias Carosella</h1>
+            <p class="text-xl md:text-2xl font-light tracking-wide text-gray-700 uppercase">Speculative Fiction & Literary Fantasy</p>
+        </header>
 
-    <section class="mb-24 fade-in" style="animation-delay: 0.2s;">
-        <h2 class="text-3xl border-b border-gray-300 pb-2 mb-8 uppercase tracking-widest text-sm font-semibold">Selected Works</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="group cursor-pointer">
-                <div class="aspect-[2/3] bg-gray-200 mb-4 transition-transform duration-500 group-hover:scale-[1.02] shadow-sm">
+        <section class="mb-32 fade-in" style="animation-delay: 0.2s;">
+            <h2 class="text-4xl italic mb-12 border-b border-black/10 pb-4">Selected Publications</h2>
+            <div class="space-y-16">
+                <div class="group grid md:grid-cols-4 gap-8 items-start">
+                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-500 pt-2">2026</div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-3xl group-hover:italic transition-all duration-300">The Orc Prince "Low Wrist"</h3>
+                        <p class="mt-2 text-lg text-gray-600 leading-relaxed font-light">A character exploration set in a world of [Insert World Details].</p>
                     </div>
-                <h3 class="text-2xl mb-1">Title of Your First Work</h3>
-                <p class="text-gray-500 text-sm italic">Coming Soon / Published 2026</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-[2/3] bg-gray-200 mb-4 transition-transform duration-500 group-hover:scale-[1.02] shadow-sm">
                 </div>
-                <h3 class="text-2xl mb-1">Title of Your Second Work</h3>
-                <p class="text-gray-500 text-sm italic">Short Stories / Essays</p>
+                <div class="group grid md:grid-cols-4 gap-8 items-start">
+                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-500 pt-2">Forthcoming</div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-3xl group-hover:italic transition-all duration-300">Untitled Project</h3>
+                        <p class="mt-2 text-lg text-gray-600 leading-relaxed font-light">Exploring the intersection of technology and ancient folklore.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="mb-24 fade-in" style="animation-delay: 0.4s;">
-        <h2 class="text-3xl border-b border-gray-300 pb-2 mb-8 uppercase tracking-widest text-sm font-semibold">About</h2>
-        <div class="max-w-2xl text-lg leading-relaxed text-gray-700">
-            <p class="mb-6">Based in NYC, I focus on narratives that bridge the gap between the familiar and the surreal.</p>
-            <p>I am currently exploring themes of [Topic A] and [Topic B], with a heavy influence from early 20th-century animation and classical ink traditions.</p>
-        </div>
-    </section>
+        <section class="mb-32 fade-in" style="animation-delay: 0.4s;">
+            <h2 class="text-4xl italic mb-8">About</h2>
+            <div class="max-w-xl text-xl leading-relaxed font-light text-gray-800">
+                <p class="mb-6">Mattias Carosella is a writer based in New York City with experience in international relations and recruiting.</p>
+                <p>His work blends the sharp edges of science fiction with the fluid, atmospheric aesthetics of Studio Ghibli and traditional Chinese ink wash.</p>
+            </div>
+        </section>
 
-    <section class="mb-24 fade-in" style="animation-delay: 0.6s;">
-        <h2 class="text-3xl border-b border-gray-300 pb-2 mb-8 uppercase tracking-widest text-sm font-semibold">Contact</h2>
-        <p class="text-xl mb-4">For inquiries or collaborations, please reach out via email:</p>
-        <a href="mailto:hello@mattiascarosella.com" class="text-2xl text-gray-900 border-b-2 border-black hover:text-gray-500 hover:border-gray-500 transition-colors">
-            hello@mattiascarosella.com
-        </a>
-    </section>
-
-    <footer class="mt-48 text-gray-400 text-sm">
-        &copy; 2026 Mattias Carosella. All rights reserved.
-    </footer>
+        <footer class="fade-in" style="animation-delay: 0.6s;">
+            <h2 class="text-4xl italic mb-8">Connect</h2>
+            <div class="space-y-4">
+                <p class="text-lg font-light">For inquiries regarding rights or collaborations:</p>
+                <a href="mailto:hello@mattiascarosella.com" class="inline-block text-3xl border-b border-black hover:pb-2 transition-all duration-300">
+                    hello@mattiascarosella.com
+                </a>
+            </div>
+            <div class="mt-32 text-xs uppercase tracking-[0.2em] text-gray-400">
+                &copy; 2026 Mattias Carosella
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
