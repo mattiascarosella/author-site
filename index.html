@@ -9,92 +9,101 @@
     <style>
         body { 
             font-family: 'Space Grotesk', sans-serif; 
-            background-color: #f4f1ea; 
-            color: #1a1a1a; 
+            background-color: #0d1117; /* Midnight Ink */
+            color: #f4f1ea; /* Cream Lettering */
             scroll-behavior: smooth;
         }
         h1, h2, h3, .literary { font-family: 'Cormorant Garamond', serif; }
         .fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
         
-        .ink-accent {
-            background: radial-gradient(circle at top right, rgba(0,0,0,0.02) 0%, transparent 70%);
+        /* Atmospheric Glow */
+        .glow {
+            background: radial-gradient(circle at top right, rgba(45, 66, 255, 0.08) 0%, transparent 60%);
         }
-        .pub-link:hover { font-style: italic; padding-left: 8px; }
-        .pub-link { transition: all 0.3s ease; }
+        
+        .cover-art {
+            aspect-ratio: 2/3;
+            background-color: #1a202c;
+            border: 1px solid rgba(244, 241, 234, 0.1);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        .cover-art:hover {
+            border-color: rgba(244, 241, 234, 0.5);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
     </style>
+    body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background-color: #080a0f; /* Even deeper midnight */
+            color: #f4f1ea; 
+            scroll-behavior: smooth;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3... (shortened for brevity)");
+            /* This adds a subtle "film grain" texture */
+        }
+        
+        /* The "Perfect Blue" Glow */
+        .glow {
+            background: radial-gradient(circle at 20% 30%, rgba(65, 105, 225, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+        }
 </head>
-<body class="ink-accent min-h-screen">
+<body class="glow min-h-screen">
 
-    <div class="max-w-4xl mx-auto px-8 py-16 md:py-32">
+    <div class="max-w-5xl mx-auto px-8 py-16 md:py-32">
         <header class="mb-32 fade-in">
             <h1 class="text-7xl md:text-9xl mb-6 tracking-tighter leading-none">Mattias Carosella</h1>
-            <p class="text-xl md:text-2xl font-light tracking-wide text-gray-700 uppercase">Speculative Fiction & Literary Prose</p>
+            <p class="text-xl md:text-2xl font-light tracking-wide text-blue-200/70 uppercase">Speculative Fiction & Literary Prose</p>
         </header>
 
         <section class="mb-32 fade-in" style="animation-delay: 0.2s;">
-            <h2 class="text-4xl italic mb-12 border-b border-black/10 pb-4">Selected Publications</h2>
-            <div class="space-y-12">
+            <h2 class="text-4xl italic mb-12 border-b border-white/10 pb-4 text-white">Selected Publications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
-                <div class="group grid md:grid-cols-4 gap-4 items-start">
-                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-400 pt-2">2024</div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-3xl pub-link">“Lycemus Basuris”</h3>
-                        <p class="mt-1 text-lg text-gray-600 font-light italic">Andromeda Spaceways Magazine, Issue 95</p>
+                <div class="group">
+                    <div class="cover-art mb-6">
+                        <img src="https://via.placeholder.com/400x600/1a202c/f4f1ea?text=Andromeda+Spaceways" alt="Lycemus Basuris" class="w-full h-full object-cover">
                     </div>
+                    <h3 class="text-2xl mb-1 italic">“Lycemus Basuris”</h3>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">ASM Issue 95, 2024</p>
                 </div>
 
-                <div class="group grid md:grid-cols-4 gap-4 items-start">
-                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-400 pt-2">2021</div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-3xl pub-link">“The Source”</h3>
-                        <p class="mt-1 text-lg text-gray-600 font-light italic">Beneath Ceaseless Skies, Issue 343</p>
+                <div class="group">
+                    <div class="cover-art mb-6">
+                        <img src="https://via.placeholder.com/400x600/1a202c/f4f1ea?text=Beneath+Ceaseless+Skies" alt="The Source" class="w-full h-full object-cover">
                     </div>
+                    <h3 class="text-2xl mb-1 italic">“The Source”</h3>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">BCS Issue 343, 2021</p>
                 </div>
 
-                <div class="group grid md:grid-cols-4 gap-4 items-start">
-                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-400 pt-2">2020</div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-3xl pub-link">“White Droppings”</h3>
-                        <p class="mt-1 text-lg text-gray-600 font-light italic">Social Gap Experiment</p>
+                <div class="group">
+                    <div class="cover-art mb-6">
+                        <img src="https://via.placeholder.com/400x600/1a202c/f4f1ea?text=North+Dakota+Quarterly" alt="Dead Deer" class="w-full h-full object-cover">
                     </div>
-                </div>
-
-                <div class="group grid md:grid-cols-4 gap-4 items-start">
-                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-400 pt-2">2019</div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-3xl pub-link">“Dead Deer”</h3>
-                        <p class="mt-1 text-lg text-gray-600 font-light italic">North Dakota Quarterly, Vol. 86</p>
-                    </div>
-                </div>
-
-                <div class="group grid md:grid-cols-4 gap-4 items-start opacity-60">
-                    <div class="md:col-span-1 text-sm uppercase tracking-widest text-gray-400 pt-2">In Progress</div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-3xl pub-link">“Low Wrist”</h3>
-                        <p class="mt-1 text-lg text-gray-600 font-light">An exploration of the Orc Prince</p>
-                    </div>
+                    <h3 class="text-2xl mb-1 italic">“Dead Deer”</h3>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">NDQ Vol. 86, 2019</p>
                 </div>
 
             </div>
         </section>
 
         <section class="mb-32 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-4xl italic mb-8">Bio</h2>
-            <div class="max-w-xl text-xl leading-relaxed font-light text-gray-800">
-                <p class="mb-6">Mattias Carosella is a writer and recruiter based in New York City. His work has appeared in <i>Andromeda Spaceways</i>, <i>Beneath Ceaseless Skies</i>, and <i>North Dakota Quarterly</i>.</p>
-                <p>He is currently developing new narratives that blend traditional folklore with speculative futurism.</p>
+            <h2 class="text-4xl italic mb-8 text-white">Bio</h2>
+            <div class="max-w-2xl text-xl leading-relaxed font-light text-gray-300">
+                <p class="mb-6">Mattias Carosella is a writer based in NYC, drawing from his background in international relations and recruitment.</p>
+                <p>His narratives inhabit the spaces where traditional folklore meets speculative futurism. Currently, he is exploring character design and world-building through the lens of early animation aesthetics.</p>
             </div>
         </section>
 
         <footer class="fade-in" style="animation-delay: 0.6s;">
-            <h2 class="text-4xl italic mb-8">Connect</h2>
-            <div class="space-y-4">
-                <a href="mailto:hello@mattiascarosella.com" class="inline-block text-3xl border-b border-black hover:pb-2 transition-all duration-300">
-                    hello@mattiascarosella.com
-                </a>
-            </div>
-            <div class="mt-32 text-xs uppercase tracking-[0.2em] text-gray-400">
+            <h2 class="text-4xl italic mb-8 text-white">Connect</h2>
+            <a href="mailto:hello@mattiascarosella.com" class="inline-block text-3xl border-b border-white hover:text-blue-200 transition-all duration-300">
+                hello@mattiascarosella.com
+            </a>
+            <div class="mt-32 text-xs uppercase tracking-[0.2em] text-gray-500">
                 &copy; 2026 Mattias Carosella
             </div>
         </footer>
