@@ -9,19 +9,22 @@
     <style>
         body { 
             font-family: 'Space Grotesk', sans-serif; 
-            background-color: #0d1117; /* Midnight Ink */
-            color: #f4f1ea; /* Cream Lettering */
+            background-color: #080a0f; 
+            color: #f4f1ea; 
             scroll-behavior: smooth;
+            /* Film grain texture */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-attachment: fixed;
         }
+        
         h1, h2, h3, .literary { font-family: 'Cormorant Garamond', serif; }
-        .fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* Atmospheric Glow */
+        /* The "Perfect Blue" Atmospheric Glow */
         .glow {
-            background: radial-gradient(circle at top right, rgba(45, 66, 255, 0.08) 0%, transparent 60%);
+            background: radial-gradient(circle at 20% 30%, rgba(65, 105, 225, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.08) 0%, transparent 50%);
         }
-        
+
         .cover-art {
             aspect-ratio: 2/3;
             background-color: #1a202c;
@@ -29,26 +32,16 @@
             transition: all 0.4s ease;
             overflow: hidden;
         }
+
         .cover-art:hover {
             border-color: rgba(244, 241, 234, 0.5);
             transform: scale(1.02);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
+
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
-    body { 
-            font-family: 'Space Grotesk', sans-serif; 
-            background-color: #080a0f; /* Even deeper midnight */
-            color: #f4f1ea; 
-            scroll-behavior: smooth;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3... (shortened for brevity)");
-            /* This adds a subtle "film grain" texture */
-        }
-        
-        /* The "Perfect Blue" Glow */
-        .glow {
-            background: radial-gradient(circle at 20% 30%, rgba(65, 105, 225, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
-        }
 </head>
 <body class="glow min-h-screen">
 
@@ -58,7 +51,7 @@
             <p class="text-xl md:text-2xl font-light tracking-wide text-blue-200/70 uppercase">Speculative Fiction & Literary Prose</p>
         </header>
 
-       <section class="mb-32 fade-in" style="animation-delay: 0.2s;">
+        <section class="mb-32 fade-in" style="animation-delay: 0.2s;">
             <h2 class="text-4xl italic mb-12 border-b border-white/10 pb-4 text-white">Selected Publications</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16">
